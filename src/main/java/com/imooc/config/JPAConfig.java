@@ -30,7 +30,7 @@ public class JPAConfig {
 	}
 
 	@Bean
-	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		HibernateJpaVendorAdapter jpaVendor = new HibernateJpaVendorAdapter();
 		jpaVendor.setGenerateDdl(false);
 		jpaVendor.setDatabasePlatform(databasePlatform);
