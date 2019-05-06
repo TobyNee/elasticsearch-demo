@@ -15,10 +15,24 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/get")
-	@ResponseBody
-	public ApiResponse get() {
-		return ApiResponse.ofMessage(200, "成功了");
+	@GetMapping("/404")
+	public String notFountPage() {
+		return "404";
+	}
+
+	@GetMapping("403")
+	public String accessError() {
+		return "403";
+	}
+
+	@GetMapping("/500")
+	public String internalError() {
+		return "500";
+	}
+
+	@GetMapping("/logout")
+	public String logoutPage() {
+		return "logout";
 	}
 
 }
